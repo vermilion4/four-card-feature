@@ -7,192 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Four card feature section</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-    body{
-      font-family: "poppins";
-      font-size: 15px;
-      color: hsl(234, 12%, 34%)
-    }
-
-    /*main container*/
-    .container{
-      display: grid;
-      width: 375px;
-      margin: auto;
-      grid-template-areas: "hd"
-                          "lt"
-                          "main"
-                          "rt"
-                          "ft";
-      grid-gap: 30px;
-
-    }
-
-    /*grid areas*/
-    #header{
-      grid-area: hd;
-      width: 300px;
-      margin: auto;
-      padding-bottom: 70px;
-      text-align: center;
-    }
-    #left{
-      grid-area: lt;
-      border: 1px solid hsl(0, 0%, 98%);
-      width: 300px;
-      margin: auto;
-      padding: 30px;
-      border-radius: 2%;
-      border-top-width: 3px;
-      border-top-color: hsl(180, 62%, 55%);
-      box-shadow: 10px 10px 25px grey;
-
-    }
-    #main{
-      grid-area: main;
-    }
-    #right{
-      grid-area: rt;
-      border: 1px solid hsl(0, 0%, 98%);
-      width: 300px;
-      margin: auto;
-      padding: 30px;
-      border-radius: 2%;
-      border-top-width: 3px;
-      border-top-color: hsl(212, 86%, 64%);
-      box-shadow: 10px 10px 25px grey;
-    }
-    #footer{
-      grid-area: ft;
-    }
-
-    /*header texts*/
-    #one, #str{
-      display: block;
-      font-size: 22px;
-      text-align: center;
-    }
-    #one{
-      margin-top: 15%;
-    }
-    #str{
-      font-weight: 600;
-      color: black;
-      padding-bottom: 10px;
-      opacity: 0.8;
-    }
-
-    /*card headers*/
-    #two, #three, #four, #five{
-      display: block;
-      font-size: 18px;
-      font-weight: 800;
-      color: black;
-    }
-
-    /*container for main class*/
-    #cont{
-      display: grid;
-      grid-gap: 30px;
-    }
-
-    /*main cards*/
-    #cardOne{
-      border: 1px solid hsl(0, 0%, 98%);
-      width: 300px;
-      margin: auto;
-      padding: 30px;
-      border-radius: 2%;
-      border-top-width: 3px;
-      border-top-color: hsl(0, 78%, 62%);
-      box-shadow: 10px 10px 25px grey;
-    }
-    #cardTwo{
-      border: 1px solid hsl(0, 0%, 98%);
-      width: 300px;
-      margin: auto;
-      padding: 30px;
-      border-radius: 2%;
-      border-top-width: 3px;
-      border-top-color: hsl(34, 97%, 64%);
-      box-shadow: 10px 10px 25px grey;
-    }
-
-    /*icons*/
-    #supervisorIcon{
-      background-image: url("images/icon-supervisor.svg");
-      background-size: cover;
-      width: 50px;
-      height: 50px;
-      margin-left: auto;
-      margin-top: 30px;
-
-    }
-    #teamIcon{
-      background-image: url("images/icon-team-builder.svg");
-      background-size: cover;
-      width: 50px;
-      height: 50px;
-      margin-left: auto;
-      margin-top: 30px;
-    }
-    #karmaIcon{
-      background-image: url("images/icon-karma.svg");
-      background-size: cover;
-      width: 50px;
-      height: 50px;
-      margin-left: auto;
-      margin-top: 30px;
-    }
-    #calculatorIcon{
-      background-image: url("images/icon-calculator.svg");
-      background-size: cover;
-      width: 50px;
-      height: 50px;
-      margin-left: auto;
-      margin-top: 30px;
-    }
-
-    /*footer*/
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-
-    @media(min-width: 1440px){
-      .container{
-        display: grid;
-        width: 100%;
-        justify-content: center;
-        margin: auto;
-        grid-template-columns: repeat(3, auto);
-        grid-template-rows: auto;
-        grid-template-areas: "hd hd hd hd hd hd hd hd"
-                          "lt lt lt main main rt rt rt"
-                          "ft ft ft ft ft ft ft ft";
-        grid-gap: 30px;
-
-      }
-      #header{
-        grid-area: hd;
-        width: 500px;
-        margin: auto;
-        padding-bottom: 70px;
-        text-align: center;
-      }
-      #one, #str{
-        display: block;
-        font-size: 30px;
-        text-align: center;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -205,23 +20,23 @@
 
   <div id="left"><span id="two">Supervisor</span>
     Monitors activity to identify project roadblocks
-  <div id="supervisorIcon"></div></div>
+  <div id="supervisorIcon" class="icon"></div></div>
 
   <div id="main">
     <div id="cont">
     <div id="cardOne"><span id="three">Team Builder</span>
     Scans our talent network to create the optimal team for your project
-      <div id="teamIcon"></div></div>
+      <div id="teamIcon" class="icon"></div></div>
 
     <div id="cardTwo"><span id="four">Karma</span>
     Regularly evaluates our talent to ensure quality
-      <div id="karmaIcon"></div></div>
+      <div id="karmaIcon" class="icon"></div></div>
     </div>
   </div>
 
   <div id="right"><span id="five">Calculator</span>
     Uses data from past projects to provide better delivery estimates
-  <div id="calculatorIcon"></div></div>
+  <div id="calculatorIcon" class="icon"></div></div>
 
   
   <div id="footer">

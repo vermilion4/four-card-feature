@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+    font-family: "poppins";
+    font-size: 15px;
+    color: hsl(234, 12%, 34%)
+}
+
+/*main container*/
+.container{
+    display: grid;
+    width: 375px;
+    margin: auto;
+    grid-template-areas: "hd"
+                          "lt"
+                          "main"
+                          "rt"
+                          "ft";
+    grid-gap: 30px;
+
+}
+
+/*grid areas*/
+#header{
+    grid-area: hd;
+    width: 300px;
+    margin: auto;
+    padding-bottom: 70px;
+    text-align: center;
+}
+#left{
+    grid-area: lt;
+    border: 1px solid hsl(0, 0%, 98%);
+    width: 300px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 2%;
+    border-top-width: 3px;
+    border-top-color: hsl(180, 62%, 55%);
+    box-shadow: 10px 10px 25px grey;
+
+}
+#main{
+    grid-area: main;
+}
+#right{
+    grid-area: rt;
+    border: 1px solid hsl(0, 0%, 98%);
+    width: 300px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 2%;
+    border-top-width: 3px;
+    border-top-color: hsl(212, 86%, 64%);
+    box-shadow: 10px 10px 25px grey;
+}
+#footer{
+    grid-area: ft;
+}
+
+/*header texts*/
+#one, #str{
+    display: block;
+    font-size: 22px;
+    text-align: center;
+}
+#one{
+    margin-top: 15%;
+}
+#str{
+    font-weight: 600;
+    color: black;
+    padding-bottom: 10px;
+    opacity: 0.8;
+}
+
+/*card headers*/
+#two, #three, #four, #five{
+    display: block;
+    font-size: 18px;
+    font-weight: 800;
+    color: black;
+}
+
+/*container for main class*/
+#cont{
+    display: grid;
+    grid-gap: 30px;
+}
+
+/*main cards*/
+#cardOne{
+    border: 1px solid hsl(0, 0%, 98%);
+    width: 300px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 2%;
+    border-top-width: 3px;
+    border-top-color: hsl(0, 78%, 62%);
+    box-shadow: 10px 10px 25px grey;
+}
+#cardTwo{
+    border: 1px solid hsl(0, 0%, 98%);
+    width: 300px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 2%;
+    border-top-width: 3px;
+    border-top-color: hsl(34, 97%, 64%);
+    box-shadow: 10px 10px 25px grey;
+}
+
+/*icons*/
+.icon{
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    margin-top: 30px;
+}
+
+#supervisorIcon{
+    background-image: url("images/icon-supervisor.svg");
+}
+#teamIcon{
+    background-image: url("images/icon-team-builder.svg");
+}
+#karmaIcon{
+    background-image: url("images/icon-karma.svg");
+}
+#calculatorIcon{
+    background-image: url("images/icon-calculator.svg");
+}
+
+/*footer*/
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media(min-width: 1440px){
+    .container{
+        display: grid;
+        width: 100%;
+        justify-content: center;
+        margin: auto;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: auto;
+        grid-template-areas: "hd hd hd hd hd hd hd hd"
+                          "lt lt lt main main rt rt rt"
+                          "ft ft ft ft ft ft ft ft";
+        grid-gap: 30px;
+
+    }
+    #header{
+        grid-area: hd;
+        width: 500px;
+        margin: auto;
+        padding-bottom: 70px;
+        text-align: center;
+    }
+    #one, #str{
+        display: block;
+        font-size: 30px;
+        text-align: center;
+    }
+}
